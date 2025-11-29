@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Game Đoán Số</title>
+    <link rel="stylesheet" href="css/style.css"> 
+    <style>
+        /* CSS riêng cho Game */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #333;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+        .game-box {
+            background: #444;
+            padding: 40px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+            width: 350px;
+        }
+        h1 { margin-bottom: 10px; }
+        input {
+            padding: 10px;
+            font-size: 1.2rem;
+            width: 100px;
+            text-align: center;
+            border-radius: 5px;
+            border: none;
+            margin-bottom: 15px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 1rem;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            margin: 5px;
+        }
+        #guessBtn { background: #28a745; }
+        #restartBtn { background: #007bff; display: none; }
+        
+        /* Animation Pháo giấy */
+        .confetti {
+            position: absolute;
+            width: 10px; height: 10px;
+            top: -10px;
+            animation: fall linear forwards;
+            z-index: 100;
+        }
+        @keyframes fall { to { transform: translateY(100vh) rotate(720deg); } }
+        
+        /* Nút về trang chủ */
+        .home-btn {
+            position: absolute; top: 20px; left: 20px;
+            color: white; border: 1px solid white; 
+            padding: 8px 15px; text-decoration: none; border-radius: 5px;
+        }
+        .home-btn:hover { background: rgba(255,255,255,0.1); }
+    </style>
+</head>
+<body>
+
+    <a href="index.html" class="home-btn">← Về Trang Chủ</a>
+
+    <div class="game-box">
+        <h1>Game Đoán Số</h1>
+        <p>Phạm vi: 50 - 150</p>
+        <p>Số lần thử: <span id="attemptCount" style="color: yellow; font-weight: bold;">0</span></p>
+
+        <input type="number" id="guessInput" placeholder="?" min="50" max="150">
+        <br>
+        <button id="guessBtn" onclick="checkGuess()">Đoán</button>
+        <button id="restartBtn" onclick="initGame()">Chơi Lại</button>
+
+        <p id="message" style="margin-top: 20px; min-height: 20px;">...</p>
+    </div>
+
+    <script src="js/game.js"></script>
+
+</body>
+</html>

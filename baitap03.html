@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 03 - Music Player</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav>
+        <a href="index.html">Trang chủ</a>
+
+    </nav>
+
+    <div class="container" style="background: transparent; box-shadow: none;">
+        <div class="player-container" id="player">
+            <h2>JS Music Player</h2>
+            <img src="" class="cover-img" id="cover">
+            <h3 id="song-title">Song Title</h3>
+            
+            <canvas id="equalizer"></canvas>
+            
+            <input type="range" id="progress" value="0" min="0" step="1" style="width: 100%; cursor: pointer;">
+
+            <div class="controls">
+                <button id="shuffle-btn" onclick="toggleShuffle()" title="Shuffle">🔀</button>
+                <button onclick="prevSong()">⏮</button>
+                <button onclick="togglePlay()" id="play-btn" style="font-size: 40px;">▶️</button>
+                <button onclick="nextSong()">⏭</button>
+                <button id="repeat-btn" onclick="toggleRepeat()" title="Repeat">🔁</button>
+            </div>
+
+            <ul class="playlist" id="playlist-el"></ul>
+        </div>
+    </div>
+
+    <footer id="main-footer"></footer>
+    <script src="js/main.js"></script>
+</body>
+</html>

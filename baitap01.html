@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sản phẩm Tai Nghe</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <header class="glass-header">
+        <div class="logo" style="color: #007bff; font-weight: bold;">AUDIO ABC</div>
+        <nav>
+            <ul class="nav-menu">
+                <li><a href="index.html">Về Trang Chủ</a></li>
+                <li><a href="#features">Tính năng</a></li>
+                <li><a href="#gallery">Thư viện</a></li>
+                <li><a href="LienHe.html">Liên hệ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Tech Store</h1>
+                <p>Showroom phân phối hàng điện tử số 1 Châu Á.</p>
+                <a href="#" class="btn-primary">Mua Ngay</a>
+            </div>
+            <div class="hero-image">
+                <img src="images/jp28185-scaled_2ef3717f32854c6386c496b1426db6e5.jpg" alt="Tai nghe" id="hero-img">
+            </div>
+        </section>
+
+        <section id="features" class="features">
+            <h2>Tính Năng</h2>
+            <div class="feature-grid">
+                <div class="feature-item">
+                    <i class="fas fa-battery-full fa-2x"></i>
+                    <h3>Pin 24h</h3>
+                    <p>Nghe nhạc cả ngày không lo hết pin.</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-wifi fa-2x"></i>
+                    <h3>Bluetooth 5.2</h3>
+                    <p>Kết nối siêu nhanh và ổn định.</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-volume-mute fa-2x"></i>
+                    <h3>Chống ồn</h3>
+                    <p>Cách âm tuyệt đối với môi trường.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="gallery" class="gallery">
+            <h2>Thư viện ảnh</h2>
+            <div class="gallery-container">
+                <div class="main-display">
+                    <img src="images/JP28073-9-scaled.jpg" id="current-img" alt="Ảnh hiển thị chính">
+                </div>
+
+                <div class="thumbnails">
+                    <img src="images/JP28073-9-scaled.jpg" class="thumb active" onclick="changeImage(this)" alt="Ảnh 1">
+                    
+                    <img src="images/jp28185-scaled_2ef3717f32854c6386c496b1426db6e5.jpg" class="thumb" onclick="changeImage(this)" alt="Ảnh 2">
+                    
+                    <img src="images/JP28194-scaled.jpg" class="thumb" onclick="changeImage(this)" alt="Ảnh 3">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p> © 2025 Thi Vo Hoang Huy</p>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
